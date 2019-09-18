@@ -160,4 +160,10 @@ class Firestore {
       'cacheSizeBytes': cacheSizeBytes,
     });
   }
+
+  Future<void> enableNetwork({bool enable}) async {
+    await channel.invokeListMethod<void>('Firestore#enableNetwork', <String, dynamic>{
+      'enable': enable,
+    });
+  }
 }

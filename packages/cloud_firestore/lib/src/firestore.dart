@@ -162,7 +162,7 @@ class Firestore {
   }
 
   Future<void> enableNetwork({bool enable}) async {
-    await channel.invokeListMethod<void>('Firestore#enableNetwork', <String, dynamic>{
+    await channel.invokeMethod<void>('Firestore#enableNetwork', <String, dynamic>{
       'app': app.name,
       'enable': enable,
     });

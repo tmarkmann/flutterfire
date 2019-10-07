@@ -837,6 +837,7 @@ public class CloudFirestorePlugin implements MethodCallHandler {
                     });
           }
         }
+        break;
       }
       default:
         {

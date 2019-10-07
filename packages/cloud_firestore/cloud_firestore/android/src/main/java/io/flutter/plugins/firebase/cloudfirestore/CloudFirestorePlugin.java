@@ -987,6 +987,7 @@ public class CloudFirestorePlugin implements MethodCallHandler, FlutterPlugin, A
                     });
           }
         }
+        break;
       }
       default:
         {

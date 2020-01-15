@@ -1,3 +1,25 @@
+## 0.4.1+6
+
+* Fix analysis failures
+
+## 0.4.1+5
+
+* Remove the deprecated `author:` field from pubspec.yaml
+* Migrate the plugin to the pubspec platforms manifest.
+* Bump the minimum Flutter version to 1.10.0.
+
+## 0.4.1+4
+
+* Updated README instructions for contributing for consistency with other Flutterfire plugins.
+
+## 0.4.1+3
+
+* Remove AndroidX warning.
+
+## 0.4.1+2
+
+* Update Android package name.
+
 ## 0.4.1+1
 
 * Update documentation to reflect new repository location.

@@ -963,6 +963,31 @@ public class CloudFirestorePlugin implements MethodCallHandler, FlutterPlugin, A
           result.success(null);
           break;
         }
+      case "Firestore#enableNetwork":
+      {
+        final Map<String, Object> arguments = call.arguments();
+
+        if (arguments.get("enable") != null) {
+          Boolean enable = (Boolean) arguments.get("enable");
+          if (enable) {
+            getFirestore(arguments).enableNetwork()
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                      @Override
+                      public void onComplete(@NonNull Task<Void> task) {
+                        result.success(null);
+                      }
+                    });
+          } else {
+            getFirestore(arguments).disableNetwork()
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                      @Override
+                      public void onComplete(@NonNull Task<Void> task) {
+                        result.success(null);
+                      }
+                    });
+          }
+        }
+      }
       default:
         {
           result.notImplemented();
